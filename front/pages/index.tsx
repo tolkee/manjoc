@@ -1,10 +1,12 @@
-import * as React from 'react';
-import { NextPage } from 'next';
+import * as React from "react";
+import { NextPage } from "next";
 import styled from "styled-components";
-import { Grid, Paper } from '@material-ui/core';
+import { Grid, Paper } from "@material-ui/core";
+import withLayout from "../components/Layout";
+import { onlyLoggedIn } from "../src/guards/auth";
 
 const IndexWrapper = styled(Grid)`
-  background-image: url(https://www.hdwallpapers.in/download/scenic_landscape_4k-2560x1440.jpg);
+  background-image: url(https://www.hdwallpapers.in/download/scenic_landscape_4k-1920x1080.jpg);
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -19,18 +21,16 @@ const MainPaper = styled(Paper)`
 const IndexPage: NextPage = () => {
   return (
     <IndexWrapper container title="Manjoc">
-      <Grid item xs xl>
-
-      </Grid>
-      <Grid item xs xl alignItems="center">
+      <Grid item xs xl></Grid>
+      <Grid item xs xl container alignItems="center" justify="center">
         <MainPaper elevation={6} />
       </Grid>
     </IndexWrapper>
-  )
+  );
 };
 
-IndexPage.getInitialProps = () => {
-  return ({ title: "Hey" });
-}
+// IndexPage.getInitialProps = () => {
+//   return { title: "Hey" };
+// };
 
-export default IndexPage;
+export default onlyLoggedIn(withLayout(IndexPage));
