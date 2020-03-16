@@ -13,10 +13,10 @@ export const DarkTheme: ThemeApp = {
     palette: {
       type: 'dark',
       primary: {
-        main: '#556cd6',
+        main: '#00D394',
       },
       secondary: {
-        main: '#19857b',
+        main: '#302D2D',
       },
       error: {
         main: red.A400,
@@ -39,10 +39,10 @@ export const LightTheme: ThemeApp = {
     palette: {
       type: 'light',
       primary: {
-        main: '#556cd7',
+        main: '#00D394',
       },
       secondary: {
-        main: '#19857b',
+        main: '#302D2D',
       },
       error: {
         main: red.A400,
@@ -54,7 +54,7 @@ export const LightTheme: ThemeApp = {
         primary: 'rgba(0, 0, 0, 0.87)',
         secondary: 'rgba(0, 0, 0, 0.60)',
         disabled: 'rgba(0, 0, 0, 0.38)'
-      }
+      },
     },
   })
 };
